@@ -61,11 +61,11 @@
                 oli[i].index = i;
                 oli[i].onmouseover = function () {
                     for (var j = 0; j < oli.length; j++) {
-                        oli[j].className = "";
-                        odiv[j].className = "hide";
+                        oli[j].classList.remove("on");
+                        odiv[j].classList.add("hide");
                     }
-                    this.className = "on";
-                    odiv[this.index].className = "";
+                    this.classList.add("on");
+                    odiv[this.index].classList.remove("hide");
                 }
             }
         }
@@ -101,5 +101,3 @@
 </body>
 
 </html>
-
-!
